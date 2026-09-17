@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Capacitación de Inspectores</title>
+
+    <link rel="stylesheet"
+          href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        CIAAC
+    </div>
+
+    <div>
+        <h1>Programa de Capacitación de Inspectores</h1>
+        <p>Curso autogestivo</p>
+    </div>
+
+</header>
+
+
+<nav class="menu">
+
+    <button onclick="mostrarSeccion('inicio')">
+        🏠 Inicio
+    </button>
+
+    <button onclick="mostrarSeccion('curso')">
+        📚 Curso
+    </button>
+
+    <button onclick="mostrarSeccion('evaluacion')">
+        📝 Evaluación
+    </button>
+
+    <button onclick="mostrarSeccion('progreso')">
+        📊 Mi progreso
+    </button>
+
+</nav>
+
+
+<main>
+
+
+<!-- ================= INICIO ================= -->
+
+<section id="inicio" class="seccion activa">
+
+    <div class="hero">
+
+        <h2>Bienvenido al curso</h2>
+
+        <p>
+            Este programa está diseñado para desarrollar
+            conocimientos y competencias aplicables a las
+            funciones de inspección.
+        </p>
+
+        <button class="btn-principal"
+                onclick="mostrarSeccion('curso')">
+
+            Comenzar capacitación
+
+        </button>
+
+    </div>
+
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+
+            <span>📚</span>
+
+            <h3>Contenido</h3>
+
+            <p>
+                Material de estudio organizado por módulos.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>🎯</span>
+
+            <h3>Competencias</h3>
+
+            <p>
+                Desarrollo de conocimientos y habilidades.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>📝</span>
+
+            <h3>Evaluación</h3>
+
+            <p>
+                Evaluaciones para comprobar el aprendizaje.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <span>📊</span>
+
+            <h3>Progreso</h3>
+
+            <p>
+                Consulta el avance de tu capacitación.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CURSO ================= -->
+
+<section id="curso" class="seccion">
+
+    <h2>Contenido del curso</h2>
+
+    <p>
+        Selecciona un módulo para comenzar.
+    </p>
+
+
+    <div class="modulos">
+
+
+        <div class="modulo">
+
+            <div class="numero">
+                01
+            </div>
+
+            <div>
+
+                <h3>Introducción</h3>
+
+                <p>
+                    Conceptos fundamentales y objetivos
+                    de la capacitación.
+                </p>
+
+                <button onclick="abrirModulo(1)">
+                    Ingresar
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modulo">
+
+            <div class="numero">
+                02
+            </div>
+
+            <div>
+
+                <h3>Marco normativo</h3>
+
+                <p>
+                    Requisitos y documentación aplicable.
+                </p>
+
+                <button onclick="abrirModulo(2)">
+                    Ingresar
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modulo">
+
+            <div class="numero">
+                03
+            </div>
+
+            <div>
+
+                <h3>Procedimientos</h3>
+
+                <p>
+                    Aplicación de procedimientos de inspección.
+                </p>
+
+                <button onclick="abrirModulo(3)">
+                    Ingresar
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modulo">
+
+            <div class="numero">
+                04
+            </div>
+
+            <div>
+
+                <h3>Casos prácticos</h3>
+
+                <p>
+                    Aplicación de conocimientos mediante
+                    escenarios.
+                </p>
+
+                <button onclick="abrirModulo(4)">
+                    Ingresar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="contenidoModulo"
+         class="contenido-modulo">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EVALUACIÓN ================= -->
+
+<section id="evaluacion" class="seccion">
+
+    <h2>Evaluación final</h2>
+
+    <p>
+        Responde las siguientes preguntas.
+    </p>
+
+
+    <form id="quiz">
+
+
+        <div class="pregunta">
+
+            <h3>
+                1. ¿Cuál es el propósito principal de
+                una inspección?
+            </h3>
+
+            <label>
+                <input type="radio"
+                       name="p1"
+                       value="a">
+
+                Identificar y evaluar el cumplimiento
+                de los requisitos aplicables.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p1"
+                       value="b">
+
+                Sustituir los procedimientos de la
+                organización.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p1"
+                       value="c">
+
+                Eliminar toda posibilidad de riesgo.
+            </label>
+
+        </div>
+
+
+
+        <div class="pregunta">
+
+            <h3>
+                2. ¿Qué debe sustentar un hallazgo?
+            </h3>
+
+            <label>
+                <input type="radio"
+                       name="p2"
+                       value="a">
+
+                Evidencia objetiva.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p2"
+                       value="b">
+
+                Una opinión personal.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p2"
+                       value="c">
+
+                Un comentario informal.
+            </label>
+
+        </div>
+
+
+
+        <div class="pregunta">
+
+            <h3>
+                3. ¿Qué debe hacer el inspector antes
+                de realizar una actividad?
+            </h3>
+
+            <label>
+                <input type="radio"
+                       name="p3"
+                       value="a">
+
+                Revisar los procedimientos y requisitos
+                aplicables.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p3"
+                       value="b">
+
+                Realizar la actividad sin preparación.
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="p3"
+                       value="c">
+
+                Delegar siempre la actividad.
+            </label>
+
+        </div>
+
+
+        <button type="button"
+                class="btn-principal"
+                onclick="calificar()">
+
+            Calificar evaluación
+
+        </button>
+
+    </form>
+
+
+    <div id="resultado"></div>
+
+</section>
+
+
+
+<!-- ================= PROGRESO ================= -->
+
+<section id="progreso" class="seccion">
+
+    <h2>Mi progreso</h2>
+
+
+    <div class="progreso-container">
+
+        <div class="barra">
+
+            <div id="barraProgreso">
+            </div>
+
+        </div>
+
+        <p id="porcentaje">
+            0% completado
+        </p>
+
+    </div>
+
+
+    <div id="estadoModulos">
+
+    </div>
+
+
+    <button class="btn-secundario"
+            onclick="reiniciarCurso()">
+
+        Reiniciar progreso
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Programa de capacitación
+    </p>
+
+    <p>
+        Material académico sujeto a actualización.
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
