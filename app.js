@@ -547,3 +547,53 @@ function reiniciarCurso() {
 
 
 actualizarProgreso();
+let pasoActual = 1;
+const totalPasos = 6;
+
+function mostrarPaso(n) {
+
+    document.querySelectorAll(".paso-tour").forEach(
+        paso => paso.classList.remove("activo")
+    );
+
+    document.getElementById("paso" + n).classList.add("activo");
+
+
+    document.querySelectorAll(".punto").forEach(
+        punto => punto.classList.remove("activo")
+    );
+
+    document.querySelector(
+        `.punto[data-paso="${n}"]`
+    ).classList.add("activo");
+
+
+    document.getElementById("btnAtras").style.visibility =
+        n === 1 ? "hidden" : "visible";
+
+    const btnSiguiente = document.getElementById("btnSiguiente");
+
+    if (n === totalPasos) {
+        btnSiguiente.textContent = "Comenzar capacitación";
+        btnSiguiente.setAttribute("onclick", "mostrarSeccion('curso')");
+    } else {
+        btnSiguiente.textContent = "Siguiente →";
+        btnSiguiente.setAttribute("onclick", "siguientePaso()");
+    }
+
+    pasoActual = n;
+}
+
+function siguientePaso() {
+    if (pasoActual < totalPasos) {
+        mostrarPaso(pasoActual + 1);
+    }
+}
+
+function pasoAnterior() {
+    if (pasoActual > 1) {
+        mostrarPaso(pasoActual - 1);
+    }
+}
+
+mostrarPaso(1);
