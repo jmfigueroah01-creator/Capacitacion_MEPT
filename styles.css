@@ -72,6 +72,8 @@ body {
     background: white;
 
     display: flex;
+    
+    justify-content: center;
 
     gap: 10px;
 
