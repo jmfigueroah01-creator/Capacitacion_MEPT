@@ -548,7 +548,14 @@ footer {
     width: 26px;
     height: 26px;
 }
-
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
 .tour-eyebrow {
     font-size: 13px;
     color: #9c7a29;
