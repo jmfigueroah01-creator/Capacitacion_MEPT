@@ -541,6 +541,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
+    animation: flotar 3s ease-in-out infinite;
 }
 
 .paso-icono svg {
