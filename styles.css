@@ -646,3 +646,19 @@ footer {
 .icono-menu {
     font-size: 20px;
 }
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #12355b;
+    color: white;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.footer-nombre {
+    font-weight: bold;
+    font-size: 16px;
+}
