@@ -31,6 +31,8 @@ body {
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 20px;
 
 }
@@ -64,6 +66,10 @@ body {
 
     margin: 5px 0 0;
 
+}
+
+.header > div {
+    text-align: center;
 }
 
 
