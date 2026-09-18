@@ -461,3 +461,109 @@ footer {
     }
 
 }
+.tour-progreso {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.punto.activo {
+    background: #12355b;
+    width: 30px;
+    border-radius: 6px;
+}
+
+.paso-tour {
+    display: none;
+    text-align: left;
+    animation: aparecer .4s ease;
+    min-height: 220px;
+}
+
+.paso-tour.activo {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paso-tour h3 {
+    color: #12355b;
+    margin-bottom: 10px;
+}
+
+.paso-tour p {
+    line-height: 1.6;
+}
+
+.paso-tour ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.subtitulo-hero {
+    font-size: 18px;
+    color: #12355b;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.tabla-modulos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-modulos th,
+.tabla-modulos td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-modulos th {
+    background: #12355b;
+    color: white;
+}
+
+.tabla-modulos tr:nth-child(even) {
+    background: #f4f6f8;
+}
+
+.cierre-hero {
+    font-style: italic;
+    color: #444;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f4f6f8;
+    border-radius: 10px;
+    border-left: 4px solid #12355b;
+}
+
+.tour-botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
