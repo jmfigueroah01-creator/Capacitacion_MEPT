@@ -469,33 +469,57 @@ footer {
     }
 
 }
+.hero-tour {
+    text-align: left;
+}
+
 .tour-progreso {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .punto {
-    width: 12px;
-    height: 12px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: #ddd;
+    border: 1.5px solid #ccc;
+    background: white;
+    color: #999;
     cursor: pointer;
-    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: .25s;
+    flex-shrink: 0;
+}
+
+.punto-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .punto.activo {
-    background: #12355b;
-    width: 30px;
-    border-radius: 6px;
+    border-color: #9c7a29;
+    background: #9c7a29;
+    color: white;
+}
+
+.punto-linea {
+    width: 28px;
+    height: 1px;
+    background: #ddd;
+    flex-shrink: 0;
 }
 
 .paso-tour {
     display: none;
     text-align: left;
     animation: aparecer .4s ease;
-    min-height: 220px;
+    min-height: 240px;
 }
 
 .paso-tour.activo {
@@ -503,23 +527,46 @@ footer {
 }
 
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.paso-tour h3 {
+.paso-icono {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #eef2f7;
     color: #12355b;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.paso-icono svg {
+    width: 26px;
+    height: 26px;
+}
+
+.tour-eyebrow {
+    font-size: 13px;
+    color: #9c7a29;
+    font-weight: bold;
+    margin: 0 0 6px;
+}
+
+.hero h2,
+.paso-tour h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: #12355b;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .paso-tour p {
-    line-height: 1.6;
+    line-height: 1.7;
+    max-width: 68ch;
 }
 
 .paso-tour ul {
@@ -528,49 +575,64 @@ footer {
 }
 
 .subtitulo-hero {
-    font-size: 18px;
+    font-size: 17px;
+    color: #444;
+    margin-top: -4px;
+    margin-bottom: 18px;
+}
+
+.silabo-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    border-top: 1px solid #e4e4e4;
+}
+
+.silabo-item {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e4e4e4;
+    align-items: baseline;
+}
+
+.silabo-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 22px;
+    color: #9c7a29;
+    font-weight: 600;
+    flex-shrink: 0;
+    width: 34px;
+}
+
+.silabo-info h4 {
+    margin: 0 0 4px;
     color: #12355b;
-    font-weight: bold;
-    margin-top: -10px;
+    font-size: 16px;
 }
 
-.tabla-scroll {
-    overflow-x: auto;
-}
-
-.tabla-modulos {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.tabla-modulos th,
-.tabla-modulos td {
-    text-align: left;
-    padding: 12px 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.tabla-modulos th {
-    background: #12355b;
-    color: white;
-}
-
-.tabla-modulos tr:nth-child(even) {
-    background: #f4f6f8;
+.silabo-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
 }
 
 .cierre-hero {
     font-style: italic;
     color: #444;
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 24px;
+    padding: 18px 22px;
     background: #f4f6f8;
-    border-radius: 10px;
-    border-left: 4px solid #12355b;
+    border-left: 3px solid #9c7a29;
 }
 
 .tour-botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+} {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
