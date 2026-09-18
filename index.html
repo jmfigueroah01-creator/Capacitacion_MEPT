@@ -10,6 +10,9 @@
 
     <link rel="stylesheet"
           href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -56,19 +59,44 @@
 
 <section id="inicio" class="seccion activa">
 
-    <div class="hero">
+    <div class="hero hero-tour">
 
-    <div class="tour-progreso">
-        <span class="punto activo" data-paso="1" onclick="mostrarPaso(1)"></span>
-        <span class="punto" data-paso="2" onclick="mostrarPaso(2)"></span>
-        <span class="punto" data-paso="3" onclick="mostrarPaso(3)"></span>
-        <span class="punto" data-paso="4" onclick="mostrarPaso(4)"></span>
-        <span class="punto" data-paso="5" onclick="mostrarPaso(5)"></span>
-        <span class="punto" data-paso="6" onclick="mostrarPaso(6)"></span>
-    </div>
+    <nav class="tour-progreso" aria-label="Progreso de la bienvenida">
+        <button type="button" class="punto activo" data-paso="1" onclick="mostrarPaso(1)" aria-label="Paso 1">
+            <span class="punto-num">1</span>
+        </button>
+        <span class="punto-linea"></span>
+        <button type="button" class="punto" data-paso="2" onclick="mostrarPaso(2)" aria-label="Paso 2">
+            <span class="punto-num">2</span>
+        </button>
+        <span class="punto-linea"></span>
+        <button type="button" class="punto" data-paso="3" onclick="mostrarPaso(3)" aria-label="Paso 3">
+            <span class="punto-num">3</span>
+        </button>
+        <span class="punto-linea"></span>
+        <button type="button" class="punto" data-paso="4" onclick="mostrarPaso(4)" aria-label="Paso 4">
+            <span class="punto-num">4</span>
+        </button>
+        <span class="punto-linea"></span>
+        <button type="button" class="punto" data-paso="5" onclick="mostrarPaso(5)" aria-label="Paso 5">
+            <span class="punto-num">5</span>
+        </button>
+        <span class="punto-linea"></span>
+        <button type="button" class="punto" data-paso="6" onclick="mostrarPaso(6)" aria-label="Paso 6">
+            <span class="punto-num">6</span>
+        </button>
+    </nav>
 
 
     <div class="paso-tour activo" id="paso1">
+
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2 L14 9 L22 12 L14 13.5 L12 22 L10 13.5 L2 12 L10 9 Z"/>
+            </svg>
+        </div>
+
+        <p class="tour-eyebrow">Paso 1 de 6</p>
         <h2>Bienvenida al Curso Autogestivo</h2>
         <p class="subtitulo-hero">
             Programa de Entrenamiento en el Puesto de Trabajo (O.J.T.)
@@ -80,11 +108,22 @@
             Programa de Entrenamiento en el Puesto de Trabajo
             (O.J.T., por sus siglas en inglés, On the Job Training).
         </p>
+
     </div>
 
 
     <div class="paso-tour" id="paso2">
-        <h3>🎯 Propósito del curso</h3>
+
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+        </div>
+
+        <p class="tour-eyebrow">Paso 2 de 6</p>
+        <h3>Propósito del curso</h3>
         <p>
             El presente curso tiene como finalidad proporcionar al personal
             sujeto al Programa OJT el conocimiento normativo, estructural y
@@ -93,11 +132,21 @@
             (MEPT) vigente, previo al inicio de su entrenamiento práctico
             en el puesto de trabajo.
         </p>
+
     </div>
 
 
     <div class="paso-tour" id="paso3">
-        <h3>💻 Modalidad autogestiva</h3>
+
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7 V12 L16 14.5"/>
+            </svg>
+        </div>
+
+        <p class="tour-eyebrow">Paso 3 de 6</p>
+        <h3>Modalidad autogestiva</h3>
         <p>
             Este curso se imparte bajo la modalidad autogestiva, lo que
             permite a cada participante avanzar de manera independiente,
@@ -111,11 +160,21 @@
             o a la Coordinación del Programa de Entrenamiento en el
             Puesto de Trabajo (CPEPT).
         </p>
+
     </div>
 
 
     <div class="paso-tour" id="paso4">
-        <h3>📌 Objetivo general</h3>
+
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3 V21"/>
+                <path d="M6 4 H17 L14.5 7.5 L17 11 H6"/>
+            </svg>
+        </div>
+
+        <p class="tour-eyebrow">Paso 4 de 6</p>
+        <h3>Objetivo general</h3>
         <p>
             Al concluir el curso, el participante será capaz de identificar
             la estructura del Programa OJT, las figuras y responsabilidades
@@ -124,49 +183,81 @@
             documentación aplicable, con el fin de participar en el
             programa con pleno conocimiento de sus obligaciones.
         </p>
+
     </div>
 
 
     <div class="paso-tour" id="paso5">
-        <h3>📚 Estructura del curso</h3>
 
-        <div class="tabla-scroll">
-        <table class="tabla-modulos">
-            <thead>
-                <tr>
-                    <th>Módulo</th>
-                    <th>Contenido</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1. Comunicación Asertiva</td>
-                    <td>Herramientas de comunicación efectiva entre instructor y aprendiz.</td>
-                </tr>
-                <tr>
-                    <td>2. Carta de Política CP CIAAC-01/23</td>
-                    <td>Marco normativo institucional que rige la capacitación.</td>
-                </tr>
-                <tr>
-                    <td>3. Introducción al MEPT</td>
-                    <td>Fundamento, objetivos, alcance y aplicabilidad del programa.</td>
-                </tr>
-                <tr>
-                    <td>4. Estructura del Sistema OJT y Proceso General</td>
-                    <td>Figuras, funciones, niveles de formación, convalidación, designación y documentación.</td>
-                </tr>
-                <tr>
-                    <td>5. Responsabilidades Administrativas</td>
-                    <td>Marco de responsabilidades del servidor público.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="3" width="16" height="18" rx="1.5"/>
+                <path d="M8 8 H16 M8 12 H16 M8 16 H12"/>
+            </svg>
         </div>
+
+        <p class="tour-eyebrow">Paso 5 de 6</p>
+        <h3>Estructura del curso</h3>
+
+        <ol class="silabo-lista">
+
+            <li class="silabo-item">
+                <span class="silabo-num">01</span>
+                <div class="silabo-info">
+                    <h4>Comunicación Asertiva</h4>
+                    <p>Herramientas de comunicación efectiva entre instructor y aprendiz.</p>
+                </div>
+            </li>
+
+            <li class="silabo-item">
+                <span class="silabo-num">02</span>
+                <div class="silabo-info">
+                    <h4>Carta de Política CP CIAAC-01/23</h4>
+                    <p>Marco normativo institucional que rige la capacitación.</p>
+                </div>
+            </li>
+
+            <li class="silabo-item">
+                <span class="silabo-num">03</span>
+                <div class="silabo-info">
+                    <h4>Introducción al MEPT</h4>
+                    <p>Fundamento, objetivos, alcance y aplicabilidad del programa.</p>
+                </div>
+            </li>
+
+            <li class="silabo-item">
+                <span class="silabo-num">04</span>
+                <div class="silabo-info">
+                    <h4>Estructura del Sistema OJT y Proceso General</h4>
+                    <p>Figuras, funciones, niveles de formación, convalidación, designación y documentación.</p>
+                </div>
+            </li>
+
+            <li class="silabo-item">
+                <span class="silabo-num">05</span>
+                <div class="silabo-info">
+                    <h4>Responsabilidades Administrativas</h4>
+                    <p>Marco de responsabilidades del servidor público.</p>
+                </div>
+            </li>
+
+        </ol>
+
     </div>
 
 
     <div class="paso-tour" id="paso6">
-        <h3>✅ Recomendaciones generales</h3>
+
+        <div class="paso-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="4" width="14" height="17" rx="1.5"/>
+                <path d="M9 3 H15 V6 H9 Z"/>
+                <path d="M8.5 13 L11 15.5 L15.5 10.5"/>
+            </svg>
+        </div>
+
+        <p class="tour-eyebrow">Paso 6 de 6</p>
+        <h3>Recomendaciones generales</h3>
         <ul>
             <li>Revisar los módulos en el orden establecido, dado que cada uno constituye la base del siguiente.</li>
             <li>Consultar el MEPT vigente para profundizar en los numerales referidos a lo largo del curso.</li>
@@ -182,7 +273,20 @@
             Se invita al participante a iniciar el presente curso con el
             compromiso y la disciplina que este proceso formativo requiere.
         </p>
+
     </div>
+
+
+    <div class="tour-botones">
+        <button class="btn-secundario" id="btnAtras" onclick="pasoAnterior()">
+            ← Atrás
+        </button>
+        <button class="btn-principal" id="btnSiguiente" onclick="siguientePaso()">
+            Siguiente →
+        </button>
+    </div>
+
+</div>
 
 
     <div class="tour-botones">
