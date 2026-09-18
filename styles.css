@@ -44,6 +44,11 @@ body {
 
 }
 
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
 
 .header h1 {
 
